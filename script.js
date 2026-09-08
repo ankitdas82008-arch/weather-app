@@ -22,8 +22,7 @@ if (city.toLowerCase() === "mehsana") {
         "<h2>⏳ Loading weather...</h2>";
 
    const url =
-    `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(searchCity)}&appid=${apiKey}&units=metric`;
-
+    `/api/weather?city=${encodeURIComponent(searchCity)}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -101,9 +100,8 @@ function showLocation(position) {
 }
 
 async function getWeatherByLocation(latitude, longitude) {
-    const url =
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-
+   const url =
+    `/api/weather?lat=${latitude}&lon=${longitude}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -128,9 +126,8 @@ async function getForecast(city) {
 
     forecast.innerHTML = "<p>⏳ Loading forecast...</p>";
 
-    const url =
-        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-
+   const url =
+    `/api/weather?forecast=${encodeURIComponent(city)}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
