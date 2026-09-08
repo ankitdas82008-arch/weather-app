@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>⛅Weather App</h1>
+
+        <input type="text" id="city" placeholder="Enter city name">
+
+        <button id="searchBtn">Search</button>
+        <button id="locationBtn">📍 My Location</button>
+        <button id="darkmodebtn" onclick="document.body.classList.toggle('dark-mode'); this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';">🌙 Dark Mode</button>
+
+        <div id="weather">
+            <h2>Weather Information</h2>
+            <p>Search for a city to see the weather.</p>
+        </div>
+        <div id="forecast"></div>
+
+    </div>
+    <script src="script.js"></Script>
+
+</body>
+
+
+
+
+    
+
+</html>
